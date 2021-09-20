@@ -97,13 +97,13 @@ function onplanetClick() {
     }
 }
 
-function showplanetDeatils(){
+function showplanetDeatils() {
     console.log(this);
     hidePlanet();
     document.getElementById("planets-details-container").style.display = "block";
     document.getElementById("planets-details-container").style.display = "flex";
- 
-    for(var j = 0; j < planets.length; j++){
+
+    for (var j = 0; j < planets.length; j++) {
         if (planets[j].name === this.classList[0]) {
             clickPlanetImg.src = planets[j].img;
             clickPlanetName.innerText = planets[j].name;
@@ -113,9 +113,10 @@ function showplanetDeatils(){
     }
 }
 
-function hidePlanetDetail(){
+function hidePlanetDetail() {
     document.getElementById("planets-details-container").style.display = "none";
 }
+
 function renderSun(planet) {
     var sunContainer = document.createElement("div");
     sunContainer.classList.add("sun-conatiner");
@@ -172,8 +173,8 @@ function renderPlanets() {
         //     break;            
         // }
 
-        if(planets[u].name === "sun") {
-            renderSun(planets[u])          
+        if (planets[u].name === "sun") {
+            renderSun(planets[u])
         } else {
             var innerPlanetContainer = document.createElement("div");
             innerPlanetContainer.classList.add(planets[u].name + "-container");
@@ -185,12 +186,13 @@ function renderPlanets() {
             planetImgContainer.appendChild(planetImg);
             innerPlanetContainer.appendChild(planetImgContainer);
             planetContainer.appendChild(innerPlanetContainer);
-            planetImg.onmouseover = onplanetClick;    
+            planetImg.onmouseover = onplanetClick;
             planetImg.onclick = showplanetDeatils;
         }
     }
 }
-function oneyeIconClick(){
+
+function oneyeIconClick() {
     hidePlanetDetail();
     showPlanet();
 }
@@ -200,5 +202,3 @@ function onScreenLoad() {
     renderPlanets();
     hidePlanetDetail();
 }
-
-
