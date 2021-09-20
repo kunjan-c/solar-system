@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body onload="onScreenLoad()">
+    <div class="main-container">
+        <div class="galaxy-img-container">
+            <img src="./Plannet/space.jpeg" class="galaxy-img" alt="">
+        </div>
+        <div class="planet-container" id="planet-container">
+            <div class="belt-container">
+                <div class="belt"></div>
+            </div>
+            <div class="palnet-namebox-container" id="palnet-namebox-container">
+                <div class="palnetNameBox">
+                    <div class="planetNameText"></div>
+                </div>
+            </div>
+        </div>
+        <div class="planets-details-container" id="planets-details-container">
+            <div class="clickplanet-big-img-container" id="clickplanet-big-img-container">
+                <img src="./images/earth.png" alt="" class="clickplanetimg" id="clickplanetimg">
+            </div>
+            <div class="clickplanet-detail-container">
+                <div class="clickplsnet-name" id="clickplsnet-name"></div>
+                <div class="length-of-year" id="length-of-year"></div>
+                <div class="discription" id="discription"></div>
+            </div>
+            <div class="planethide-eye">
+                <span class="material-icons md-45" onclick="oneyeIconClick()">
+                    visibility_off
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
